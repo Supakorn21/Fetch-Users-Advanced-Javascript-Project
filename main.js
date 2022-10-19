@@ -53,7 +53,6 @@ const selectDetail = (id) => {
     (detail) => detail.location.street.number === streetNumber
   );
   displayIndividual(filterNew);
-  console.log(filterNew);
 };
 
 const displayIndividual = (people) => {
