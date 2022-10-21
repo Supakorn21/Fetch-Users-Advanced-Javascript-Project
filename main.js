@@ -26,7 +26,6 @@ input.addEventListener("keyup", (e) => {
         .includes(searchString)
     );
   });
-  console.log(filterDetails);
   displayDetails(filterDetails);
 });
 
