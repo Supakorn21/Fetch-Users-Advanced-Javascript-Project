@@ -47,13 +47,16 @@ body {
   top: 0;
 }
 .container__left--profile-img {
-  width: 15%;
+  width: 3.063rem;
+  height: auto;
+  margin-right: 2rem;
 }
 
 .container__left--profile-img img {
-  width: 3.063rem;
-  height: 3.063rem;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  /* display: block;
+  object-fit: cover; */
   border-radius: 50%;
 }
 
@@ -140,21 +143,23 @@ body {
 /* right-side */
 
 .container__right-box {
-  /* width: 70%;
-  height: 50%;
-  align-self: center; */
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* margin: auto; */
 }
 
 .container__right-img {
   margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
+
+  width: 10.75rem;
+  height: auto;
 }
 
 .container__right-img img {
-  width: 10.75rem;
-  height: 10.75rem;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
 }
 

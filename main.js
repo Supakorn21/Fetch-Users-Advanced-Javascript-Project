@@ -10,10 +10,23 @@ input.addEventListener("keyup", (e) => {
     return (
       detail.name.first.toLowerCase().includes(searchString) ||
       detail.name.last.toLowerCase().includes(searchString) ||
-      detail.email.toLowerCase().includes(searchString)
+      detail.email.toLowerCase().includes(searchString) ||
+      detail.name.title
+        .concat(".")
+        .concat(detail.name.first)
+        .concat(" ")
+        .concat(detail.name.last)
+        .toLowerCase()
+        .includes(searchString) ||
+      detail.name.title
+        .concat(".")
+        .concat(detail.name.first)
+        .concat(" ")
+        .concat(detail.name.last)
+        .includes(searchString)
     );
   });
-
+  console.log(filterDetails);
   displayDetails(filterDetails);
 });
 
@@ -35,7 +48,7 @@ const displayDetails = (details) => {
               <img src=${detail.picture.medium} alt="" />
             </div>
             <div class="container__left--profile-details">
-              <div class="container__left--profile-name">${detail.name.title}. ${detail.name.first} ${detail.name.last}</div>
+              <div class="container__left--profile-name">${detail.name.title}.${detail.name.first} ${detail.name.last}</div>
               <div class="container__left--profile-email">
                 ${detail.email}
               </div>
@@ -63,7 +76,7 @@ const displayIndividual = (people) => {
             <img src=${item.picture.large} alt="" />
           </div>
           <div class="container__right--active--first-sentence">
-           ${item.name.title}. ${item.name.first} ${item.name.last}
+           ${item.name.title}.${item.name.first} ${item.name.last}
           </div>
           <div class="container__right--active--second-sentence">
             Gender: ${item.gender}, Age: ${item.dob.age}
